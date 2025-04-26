@@ -9,6 +9,11 @@ public class Scores : MonoBehaviour
     [SerializeField] float _highScore;
     [SerializeField] float _lastScore;
 
+    private void Start()
+    {
+        ReportScore();
+    }
+
 
     public void SetScore(float score)
     {
@@ -24,6 +29,7 @@ public class Scores : MonoBehaviour
         {
             return;
         }
+        PlayerPrefs.Save();
     }
 
     public void ReportScore()

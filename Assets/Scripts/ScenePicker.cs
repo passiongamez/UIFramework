@@ -23,4 +23,9 @@ public class ScenePicker : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void ResultsScreen()
+    {
+        SceneManager.LoadScene(4);
+    }
 }
