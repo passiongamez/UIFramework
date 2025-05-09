@@ -50,7 +50,7 @@ public class MathGame : MonoBehaviour
 
         if(_isTimeOver == true)
         {
-            _scoresScript.SetScore(_score);
+            _scoresScript.SetMathScore(_score);
             _nextQuestionButton.gameObject.SetActive(false);
             _nextSceneButton.gameObject.SetActive(true);
         }
