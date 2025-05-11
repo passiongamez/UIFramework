@@ -220,6 +220,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f63a42bedbb0154dab1e5f34342a9b3, type: 3}
+--- !u!114 &41729714 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 537717014273498473, guid: 4f63a42bedbb0154dab1e5f34342a9b3, type: 3}
+  m_PrefabInstance: {fileID: 41729713}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &41729715 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2812286210400411252, guid: 4f63a42bedbb0154dab1e5f34342a9b3, type: 3}
+  m_PrefabInstance: {fileID: 41729713}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &112068414
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,6 +3216,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7724701124698281938, guid: 71a7d8728a00dc74b8330999b0541956, type: 3}
+      propertyPath: _mathHighScoreUI
+      value: 
+      objectReference: {fileID: 41729715}
+    - target: {fileID: 7724701124698281938, guid: 71a7d8728a00dc74b8330999b0541956, type: 3}
+      propertyPath: _mathLastScoreUI
+      value: 
+      objectReference: {fileID: 41729714}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -22,11 +22,14 @@ public class MatchScript : MonoBehaviour
     [SerializeField] Button _nextButton;
     float _score = 0;
     List<Image> cardPool;
+    Scores _scoreScript;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     { 
+        _scoreScript = GameObject.Find("GameManager").GetComponent<Scores>();
+        //PlayerPrefs.GetFloat("Match High Score").ToString();
         _timer.text = Mathf.RoundToInt(_time).ToString();
         _nextButton.gameObject.SetActive(false);
         NewGame();
@@ -43,6 +46,7 @@ public class MatchScript : MonoBehaviour
             _time = 0;
             _isGameOver = true;
             _nextButton.gameObject.SetActive(true);
+            _scoreScript.SetMatchScore(_score);
         }
     }
 

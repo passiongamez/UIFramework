@@ -6,21 +6,56 @@ public class Scores : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI _mathHighScoreUI;
     [SerializeField] TextMeshProUGUI _mathLastScoreUI;
-    [SerializeField] float _mathHighScore;
-    [SerializeField] float _mathLastScore;
+    float _mathHighScore;
+    float _mathLastScore;
 
     [SerializeField] TextMeshProUGUI _matchHighScoreUI;
     [SerializeField] TextMeshProUGUI _matchLastScoreUI;
-    [SerializeField] float _matchHighScore;
-    [SerializeField] float _matchLastScore;
+    float _matchHighScore;
+    float _matchLastScore;
 
     [SerializeField] TextMeshProUGUI _shapeHighScoreUI;
     [SerializeField] TextMeshProUGUI _shapeLastScoreUI;
-    [SerializeField] float _shapeHighScore;
-    [SerializeField] float _shapeLastScore;
+    float _shapeHighScore;
+    float _shapeLastScore;
 
     private void Start()
     {
+        if(_mathHighScoreUI == null)
+        {
+            Debug.Log("math high score text is null");
+        }
+
+        if (_mathLastScoreUI == null)
+        {
+            Debug.Log("math last score text is null");
+        }
+
+        if (_matchHighScoreUI == null)
+        {
+            Debug.Log("match high score text is null");
+        }
+
+        if (_matchLastScoreUI == null)
+        {
+            Debug.Log("match last score text is null");
+        }
+
+        if (_shapeHighScoreUI == null)
+        {
+            Debug.Log("shape high score text is null");
+        }
+
+        if (_shapeLastScoreUI == null)
+        {
+            Debug.Log("shape last score text is null");
+        }
+
+        _mathHighScore = PlayerPrefs.GetFloat("Math High Score");
+        _matchHighScore = PlayerPrefs.GetFloat("Match High Score");
+       _shapeHighScore = PlayerPrefs.GetFloat("Shape High Score");
+
+
         ReportScore();
     }
 
@@ -28,67 +63,58 @@ public class Scores : MonoBehaviour
     public void SetMathScore(float score)
     {
         _mathLastScore = score;
-        PlayerPrefs.SetFloat("Last Score ", _mathLastScore);
+        PlayerPrefs.SetFloat("Math Last Score", _mathLastScore);
 
-        if (_mathHighScore < _mathLastScore)
+        if (_mathHighScore < score)
         {
-            _mathHighScore = _mathLastScore;
-            PlayerPrefs.SetFloat("High Score ", _mathHighScore);
+            _mathHighScore = score;
+            PlayerPrefs.SetFloat("Math High Score", _mathHighScore);
         }
-        else
-        {
-            return;
-        }
+
         PlayerPrefs.Save();
     }
 
     public void SetMatchScore(float score)
     {
         _matchLastScore = score;
-        PlayerPrefs.SetFloat("Last Score ", _matchLastScore);
+        PlayerPrefs.SetFloat("Match Last Score", _matchLastScore);
 
-        if (_matchHighScore < _matchLastScore)
+        if (_matchHighScore < score)
         {
-            _matchHighScore = _matchLastScore;
-            PlayerPrefs.SetFloat("High Score ", _matchHighScore);
+            _matchHighScore = score;
+            PlayerPrefs.SetFloat("Match High Score", _matchHighScore);
         }
-        else
-        {
-            return;
-        }
+
         PlayerPrefs.Save();
     }
 
     public void SetShapeScore(float score)
     {
         _shapeLastScore = score;
-        PlayerPrefs.SetFloat("Last Score ", _shapeLastScore);
+        PlayerPrefs.SetFloat("Shape Last Score", _shapeLastScore);
 
-        if (_shapeHighScore < _shapeLastScore)
+        if (_shapeHighScore < score)
         {
-            _shapeHighScore = _shapeLastScore;
-            PlayerPrefs.SetFloat("High Score ", _shapeHighScore);
+            _shapeHighScore = score;
+            PlayerPrefs.SetFloat("Shape High Score", _shapeHighScore);
         }
-        else
-        {
-            return;
-        }
+
         PlayerPrefs.Save();
     }
 
     public void ReportScore()
     {
 
-        _mathLastScoreUI.text = PlayerPrefs.GetFloat("Last Score ", _mathLastScore).ToString();
+        _mathLastScoreUI.text = PlayerPrefs.GetFloat("Math Last Score").ToString();
 
-        _mathHighScoreUI.text = PlayerPrefs.GetFloat("High Score ", _mathHighScore).ToString();
+        _mathHighScoreUI.text = PlayerPrefs.GetFloat("Math High Score").ToString();
 
-        _matchLastScoreUI.text = PlayerPrefs.GetFloat("Last Score ", _matchLastScore).ToString();
+        _matchLastScoreUI.text = PlayerPrefs.GetFloat("Match Last Score").ToString();
 
-        _matchHighScoreUI.text = PlayerPrefs.GetFloat("High Score ", _matchHighScore).ToString();
+        _matchHighScoreUI.text = PlayerPrefs.GetFloat("Match High Score").ToString();
 
-        _shapeLastScoreUI.text = PlayerPrefs.GetFloat("Last Score ", _shapeLastScore).ToString();
+        _shapeLastScoreUI.text = PlayerPrefs.GetFloat("Shape Last Score").ToString();
 
-        _shapeHighScoreUI.text = PlayerPrefs.GetFloat("HighScore ", _shapeHighScore).ToString();
+        _shapeHighScoreUI.text = PlayerPrefs.GetFloat("Shape High Score").ToString();
     }
 }

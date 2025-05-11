@@ -18,7 +18,8 @@ public class ShapeGameManager : MonoBehaviour
     void Start()
     {
         _scoreScript = GameObject.Find("GameManager").GetComponent<Scores>();
-      _timer.text = _time.ToString();   
+        //PlayerPrefs.GetFloat("Shape High Score").ToString();
+        _timer.text = _time.ToString();   
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class ShapeGameManager : MonoBehaviour
         {
             _score = _time * 50f;
             _scoreText.text = Mathf.RoundToInt( _score).ToString();
-            _scoreScript.SetShapeScore(_score);
+            _scoreScript.SetShapeScore(Mathf.RoundToInt(_score));
         }
         else
         {

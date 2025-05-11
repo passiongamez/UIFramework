@@ -28,6 +28,7 @@ public class MathGame : MonoBehaviour
     void Start()
     {
         _scoresScript = GameObject.Find("GameManager").GetComponent<Scores>();
+         //PlayerPrefs.GetFloat("Math High Score").ToString();
         _scenePicker = GameObject.Find("GameManager").GetComponent<ScenePicker>();
         _timer.text = _time.ToString();
         _scoreText.text = 0.ToString();

@@ -46,7 +46,6 @@ public class ShapesScript : MonoBehaviour, IDragHandler, IEndDragHandler, IBegin
             {
                 _shapeImage.transform.SetParent(_dropHolder.transform);
                 _shapeImage.transform.SetAsLastSibling();
-                //_shapeImage.rectTransform.localPosition = Vector3.zero;
                 break;
             }
         }
