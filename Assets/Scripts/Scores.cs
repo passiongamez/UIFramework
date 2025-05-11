@@ -104,17 +104,34 @@ public class Scores : MonoBehaviour
 
     public void ReportScore()
     {
+        if(_mathHighScoreUI != null)
+        {
+            _mathHighScoreUI.text = PlayerPrefs.GetFloat("Math High Score").ToString();
+        }
 
-        _mathLastScoreUI.text = PlayerPrefs.GetFloat("Math Last Score").ToString();
+        if(_matchHighScoreUI != null)
+        {
+            _matchHighScoreUI.text = PlayerPrefs.GetFloat("Match High Score").ToString();
+        }
 
-        _mathHighScoreUI.text = PlayerPrefs.GetFloat("Math High Score").ToString();
+        if(_shapeHighScoreUI != null)
+        {
+            _shapeHighScoreUI.text = PlayerPrefs.GetFloat("Shape High Score").ToString();
+        }
 
-        _matchLastScoreUI.text = PlayerPrefs.GetFloat("Match Last Score").ToString();
+        if(_mathLastScoreUI != null)
+        {
+            _mathLastScoreUI.text = PlayerPrefs.GetFloat("Math Last Score").ToString();
+        }
 
-        _matchHighScoreUI.text = PlayerPrefs.GetFloat("Match High Score").ToString();
+        if(_matchLastScoreUI != null)
+        {
+            _matchLastScoreUI.text = PlayerPrefs.GetFloat("Match Last Score").ToString();
+        }
 
-        _shapeLastScoreUI.text = PlayerPrefs.GetFloat("Shape Last Score").ToString();
-
-        _shapeHighScoreUI.text = PlayerPrefs.GetFloat("Shape High Score").ToString();
+        if(_shapeLastScoreUI != null)
+        {
+            _shapeLastScoreUI.text = PlayerPrefs.GetFloat("Shape Last Score").ToString();
+        }
     }
 }

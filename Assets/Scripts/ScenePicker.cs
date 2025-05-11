@@ -28,4 +28,9 @@ public class ScenePicker : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

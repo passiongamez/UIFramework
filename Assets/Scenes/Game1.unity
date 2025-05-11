@@ -211,9 +211,33 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 605914967376362700, guid: 4f63a42bedbb0154dab1e5f34342a9b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257567970761617897, guid: 4f63a42bedbb0154dab1e5f34342a9b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439296238507397089, guid: 4f63a42bedbb0154dab1e5f34342a9b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1636576173177254830, guid: 4f63a42bedbb0154dab1e5f34342a9b3, type: 3}
       propertyPath: m_Name
       value: Results Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1652591643804554319, guid: 4f63a42bedbb0154dab1e5f34342a9b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336674536684921729, guid: 4f63a42bedbb0154dab1e5f34342a9b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762573885598668096, guid: 4f63a42bedbb0154dab1e5f34342a9b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
